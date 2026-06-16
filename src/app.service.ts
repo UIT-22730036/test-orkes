@@ -19,7 +19,11 @@ export class AppService {
     context: Record<string, any>,
   ): string {
     // Points to dist/mail/templates/templateName.hbs (thanks to nest-cli.json assets configuration)
-    const templatePath = join(__dirname, 'templates', `${templateName}.hbs`);
+    const templatePath = join(
+      __dirname,
+      'mail/templates',
+      `${templateName}.hbs`,
+    );
 
     // Read the template file content
     const templateSource = fs.readFileSync(templatePath, 'utf8');
