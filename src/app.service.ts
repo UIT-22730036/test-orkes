@@ -40,13 +40,11 @@ export class AppService {
 
     await this.resend.emails.send({
       from: process.env.MAIL_FROM ?? '',
-      to: 'ankhang261096@gmail.com',
+      to: 'dellta103@gmail.com',
       subject: 'Welcome to Our App!',
       html: htmlContent,
     });
-    this.logger.log(
-      `Welcome email successfully sent to ankhang261096@gmail.com`,
-    );
+    this.logger.log(`Welcome email successfully sent to dellta103@gmail.com`);
     return 'Hello World!';
   }
 }
