@@ -6,6 +6,7 @@ import * as dotenv from 'dotenv';
 import { join } from 'path';
 import { HandlebarsAdapter } from '@nestjs-modules/mailer/adapters/handlebars.adapter';
 dotenv.config();
+console.log(join(__dirname, 'mail/templates'));
 
 @Module({
   imports: [

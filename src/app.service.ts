@@ -9,7 +9,7 @@ export class AppService {
     await this.mailService.sendMail({
       to: 'ankhang261096@gmail.com',
       subject: 'Welcome to Our App!',
-      template: './mail/templates/welcome', // Points to src/mail/templates/welcome.hbs
+      template: './welcome', // Points to src/mail/templates/welcome.hbs
       context: {
         name: 'An Khang', // Variables passed into the Handlebars template
       },
