@@ -6,7 +6,6 @@ import * as dotenv from 'dotenv';
 import { join } from 'path';
 import { HandlebarsAdapter } from '@nestjs-modules/mailer/adapters/handlebars.adapter';
 dotenv.config();
-console.log(join(__dirname, 'mail/templates'));
 
 @Module({
   imports: [
@@ -14,7 +13,7 @@ console.log(join(__dirname, 'mail/templates'));
       transport: {
         host: process.env.MAIL_HOST, // smtp.gmail.com
         port: parseInt(process.env.MAIL_PORT ?? '587', 10), // 587
-        secure: false, // Must be false for port 587
+        secure: true, // Must be false for port 587
         auth: {
           user: process.env.MAIL_USER,
           pass: process.env.MAIL_PASS,
